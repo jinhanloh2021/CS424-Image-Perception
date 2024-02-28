@@ -1,0 +1,6 @@
+.env
+predictions/*
+runs/
+yolov8n.pt
+SMU-Logo-Detection-*
+
