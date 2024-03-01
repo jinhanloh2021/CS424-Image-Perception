@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 data_version = os.getenv("DATA_VERSION")
 path_to_data = (
-    f'{os.getenv("PATH_TO_PROJECT")}/SMU-Logo-Detection-{data_version}'
+    f'{os.getenv("PATH_TO_PROJECT")}/tree-type-detection-{data_version}'
 )
 
 # Define the path to the data.yaml file
