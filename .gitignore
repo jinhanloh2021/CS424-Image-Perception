@@ -3,4 +3,4 @@ predictions/*
 runs/
 yolov8n.pt
 SMU-Logo-Detection-*
-
+resized_images/*
