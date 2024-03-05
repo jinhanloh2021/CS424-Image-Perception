@@ -1,7 +1,11 @@
 .env
 predictions/*
+!predictions/obj_est.txt
+
 runs/
-yolov8n.pt
+yolov8*.pt
 SMU-Logo-Detection-*
 tree-type-detection-*
 resized_images/*
+__pycache__
+.ipynb_checkpoints
