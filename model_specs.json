@@ -40,6 +40,40 @@
                 "Filter null require at least 20% to contain annotations"
             ],
             "augmentations": []
+        },
+        {
+            "name": "Test-9",
+            "images": 4603,
+            "preprocessing": [
+                "Auto-orient",
+                "Resize stretch to 640 x 640",
+                "Filter null require at least 10% to contain annotations"
+            ],
+            "augmentations": [
+                {
+                    "Bounding box Flip": "Horizontal and vertical"
+                },
+                {
+                    "Bounding box rotation": "-45 < r < +45"
+                },
+                {
+                    "shear": "+-25 horizontal, +-25 vertical"
+                }
+            ]
+        },
+        {
+            "name": "Test-10",
+            "images": 4599,
+            "preprocessing": [
+                "Auto-orient",
+                "Resize stretch to 640 x 640",
+                "Filter null require at least 10% to contain annotations"
+            ],
+            "augmentations": [
+                {
+                    "Bounding box rotation": "-45 < r < +45"
+                }
+            ]
         }
     ],
     "models": [
@@ -68,11 +102,35 @@
             }
         },
         {
-            "name": "v8_epoch10",
+            "name": "v8n_epoch10",
             "dataset": "Test-8",
             "pre-trained": "yolov8n",
             "hyperparams": {
                 "epochs": 10
+            }
+        },
+        {
+            "name": "v8s_epoch10",
+            "dataset": "Test-8",
+            "pre-trained": "yolov8s",
+            "hyperparams": {
+                "epochs": 10
+            }
+        },
+        {
+            "name": "v9_epoch13",
+            "dataset": "Test-9",
+            "pre-trained": "yolov8s",
+            "hyperparams": {
+                "epochs": 13
+            }
+        },
+        {
+            "name": "v11_epoch16",
+            "dataset": "Test-11",
+            "pre-trained": "yolov8s",
+            "hyperparams": {
+                "epochs": 16
             }
         }
     ]
