@@ -74,6 +74,26 @@
                     "Bounding box rotation": "-45 < r < +45"
                 }
             ]
+        },
+        {
+            "name": "Test-11",
+            "images": 8763,
+            "preprocessing": [
+                "Auto-orient",
+                "Resize stretch to 640 x 640",
+                "Filter null require at least 10% to contain annotations"
+            ],
+            "augmentations": [
+                {
+                    "Bounding box rotation": "-45 < r < +45"
+                },
+                {
+                    "Hue": "-24 < r < +24"
+                },
+                {
+                    "Blur": "1.5px"
+                }
+            ]
         }
     ],
     "models": [
@@ -131,6 +151,14 @@
             "pre-trained": "yolov8s",
             "hyperparams": {
                 "epochs": 16
+            }
+        },
+        {
+            "name": "v11_epoch40",
+            "dataset": "Test-11",
+            "pre-trained": "yolov8s",
+            "hyperparams": {
+                "epochs": 40
             }
         }
     ]
