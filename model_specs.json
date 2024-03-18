@@ -160,6 +160,22 @@
             "hyperparams": {
                 "epochs": 40
             }
+        },
+        {
+            "name": "v15_epoch11",
+            "dataset": "Test-15",
+            "pre-trained": "yolov8s",
+            "hyperparams": {
+                "epochs": 11
+            }
+        },
+        {
+            "name": "v16_epoch14",
+            "dataset": "Test-16",
+            "pre-trained": "yolov8s",
+            "hyperparams": {
+                "epochs": 14
+            }
         }
     ]
 }
