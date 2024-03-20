@@ -26,18 +26,17 @@ def update_path(data_version: str, path_to_project: str) -> None:
         yaml.dump(data, file)
 
 
-def convert_bbox_format(prediction):
-    # Extract information from the prediction object
-    image_path = prediction.path.split("\\")[-1]  # Extract image name
-    box = prediction.boxes.xyxy.tolist()[
-        0
-    ]  # Get top-left and bottom-right coordinates
-
-    # Calculate width and height
+def convert_bbox_format(box, image_path):
     width = box[2] - box[0]
     height = box[3] - box[1]
 
-    return [image_path, box[0], box[1], width, height]
+    return [
+        image_path,
+        int(round(box[0])),
+        int(round(box[1])),
+        int(round(width)),
+        int(round(height)),
+    ]
 
 
 def get_f1(results_dict) -> float:
